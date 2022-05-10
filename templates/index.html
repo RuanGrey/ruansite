@@ -1,0 +1,15 @@
+<!--    Blocks is so you dont have to write the same html code over again -->
+<!--    as here you get the same page as base.html but you blocked the content
+        This way you can change the name content in another file by blocking it -->
+
+{% extends "base.html" %}
+{% block title %}Home page{% endblock %}
+{% block content %}
+<h1>Test</h1>
+{% for car in cars %}
+    <h3>{{car}}</h3>
+{% endfor %}
+
+<!-- to get the first item in the array -->
+<h3>{{cars.1}}</h3>
+{% endblock %}
